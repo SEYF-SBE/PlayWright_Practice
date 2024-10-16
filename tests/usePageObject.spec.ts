@@ -47,3 +47,10 @@ test('Range datepicker', async ({page}) => {
     await pm.onDatepickerPage().selectDatepickerFromToday(19, 35);
 });
 
+test.only('testing with argos ci', async ({page}) => {
+    const pm = new PageManager(page);
+    await pm.navigateTo().formLayoutPage();
+    await pm.navigateTo().datepickerPage();
+
+});
+
